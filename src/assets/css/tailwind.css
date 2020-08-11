@@ -14,7 +14,7 @@
 .prose h4, 
 .prose h5, 
 .heading {
-  @apply text-indigo-700;
+  @apply text-gray-700;
 }
 
 /* 

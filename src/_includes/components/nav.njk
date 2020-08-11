@@ -6,11 +6,17 @@
         <div class="flex-shrink-0 flex items-center">
           <!-- small logo hidden on md and above -->
           <a href="/" class="block md:hidden {{ colors.logoSVGMobile | default('text-gray-700') }} hover:{{ colors.logoHover | default('text-gray-600') }}">
-            {% svg "logo_mobile",   "The Mobile Logo",   "fill-current w-16 hover:text-indigo-500" %}
+            <span class=" font-bold text-2xl">
+              SR: #100DoC        
+            </span>
+            {# svg "logo_mobile",   "The Mobile Logo",   "fill-current w-16 hover:text-indigo-500" #}
           </a>
           <!-- large logo hidden on small, block on md -->
           <a href="/" class="hidden md:block {{ colors.logoSVG | default('text-gray-700') }} hover:{{ colors.logoHover | default('text-gray-600') }}">
-            {% svg "logo",   "The Logo",   "fill-current h-8 hover:text-indigo-500" %}
+          <span class=" font-bold text-2xl">
+            Shane Robinson: #100DaysOfCode
+          </span>
+            {# svg "logo",   "The Logo",   "fill-current h-8 hover:text-indigo-500" #}
           </a>
         </div>
         <div class="hidden sm:ml-6 sm:flex">
