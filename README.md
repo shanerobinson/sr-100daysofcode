@@ -16,3 +16,5 @@ If you'd like to follow along and receive weekly email status updates of the wor
 - [Webpack](https://webpack.js.org/)
 - ...And a few helpers you can view in the [package.json file](/package.json)
 
+---
+This README will also change over the course of the project.
