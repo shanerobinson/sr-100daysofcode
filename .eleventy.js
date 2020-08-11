@@ -2,11 +2,13 @@ const fs = require('fs')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 const pluginNavigation = require('@11ty/eleventy-navigation')
 const markdownIt = require('markdown-it')
+const markdownTasks = require('markdown-it-task-lists')
 const markdownItEmoji = require('markdown-it-emoji')
 
 const collections = require('./utils/collections.js')
 const filters = require('./utils/filters.js')
 const shortcodes = require('./utils/shortcodes.js')
+const pairedshortcodes = require('./utils/paired-shortcodes.js')
 const transforms = require('./utils/transforms.js')
 const svgsprite = require('./utils/svgsprite')
 const embedYouTube = require("eleventy-plugin-youtube-embed")
@@ -44,6 +46,14 @@ module.exports = function (eleventyConfig) {
    */
   Object.keys(shortcodes).forEach((shortcodeName) => {
     eleventyConfig.addShortcode(shortcodeName, shortcodes[shortcodeName])
+  })
+
+  /**
+   * Paired Shortcodes
+   * @link https://www.11ty.dev/docs/languages/nunjucks/#paired-shortcode
+   */
+  Object.keys(pairedshortcodes).forEach((shortcodeName) => {
+    eleventyConfig.addPairedShortcode(shortcodeName, pairedshortcodes[shortcodeName])
   })
 
   /**
@@ -90,7 +100,7 @@ module.exports = function (eleventyConfig) {
     linkify: true,
     typographer: true
   };
-  let markdownLib = markdownIt(options).use(markdownItEmoji)
+  let markdownLib = markdownIt(options).use(markdownItEmoji).use(markdownTasks)
   eleventyConfig.setLibrary('md', markdownLib)
 
   /**

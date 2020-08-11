@@ -1,35 +1,38 @@
 ---
-title: Hello World
+title: Welcome!
 layout: page
-# eleventyNavigation:
-#  key: main
-#  title: Welcome  # as it will appear in the nav
-#  order: 1        # order to display in the nav
-#seo: #uncomment 'seo' and then any elements to use them
-  #title:
-  #description:
+eleventyNavigation:
+  key: main
+  title: Welcome  # as it will appear in the nav
+  order: 1        # order to display in the nav
+seo: #uncomment 'seo' and then any elements to use them
+  title: Hello World
+  description: Follow along to learn how to build fast, secure, beautiful static websites using 11ty and TailwindCSS.
 ---
 
 **Welcome to my #100DaysOfCode project website.**
 
-> NOTE: **This is NOT the finished website.** Continue reading for details on why it exists in this current state.
+> NOTE: This site will be in constant flux and changing during the 100 days of this project.
+> [Clone this project and make your own site!](https://github.com/shanerobinson/sr-100daysofcode)
 
-I created this mostly as an exercise in project management, documentation, and social interaction. The project management part is generally easy as we've been managing clients and projects in our company, [Bare Feet Studios, LLC](https://www.barefeetstudios.com) since 1996.
+I created this mostly as an exercise in daily documentation and social interaction. The project management part is generally easy as we've been managing clients and projects in our company, [Bare Feet Studios, LLC](https://www.barefeetstudios.com) since 1996.
 
-But for me, the documentation and social interaction parts are difficult as I prefer to exist behind the scenes and write the code that makes everything work.
+### What this project/site is:
 
-So I'm using my new found interest in static sites, *(specifically [11ty](https://11ty.dev))* and migrating existing Wordpress sites *(which are complicated, painfully slow, bloated, and insecure)* to 11ty as an excuse to take on the [#100DaysOfCode](https://www.100daysofcode.com/) project.
+- A playground for me to experiment and extend my knowledge and experience building static sites in [11ty](https://11ty.dev) and using [TailwindCSS](https://tailwindcss.com).
+- A place to document what I do and learn during the [#100DaysOfCode](https://www.100daysofcode.com/).
+- A site to serve as reference for future projects.
+- An exercise in "getting back into social media" after dropping out several years ago out of frustration with what social media has become.
 
-This website, built with 11ty, and hosted on [Netlify](https://Netlify.com) will also evolve during the project.
+**[Please subscribe](https://shanerobinson.ck.page/100daysofcode) if you would like to follow along with weekly email udpates on the progress.**
 
-### Day 001
+### What this site IS NOT:
 
-Today, **Day 001**, was about:
+- A tutorial site with step-by-step instructions.
 
-- setting up the project management, which I did in [Notion](https://notion.so) *(which I may also make public during this project...another good reason to subscribe :wink: )*,
-- creating this project website and pushing it to Netlify for FREE hosting,
-- creating the [ConvertKit subscription landing page](https://shanerobinson.ck.page/100daysofcode) in case you'd like to subscribe to weekly updates on my progress,
-- and Tweeting about my project per the [#100DaysOfCode](https://www.100daysofcode.com/rules/) 'rules.'
+> IF you are new to static site generators like **11ty**, or you are like me and began programming in high school in 1983, and spent the last 22+ years working professionally with a LAMP stack (Linux, Apache, mySQL, PHP) and are wondering what all this [Node.js](https://nodejs.org/) and [JAMStack](https://jamstack.org/) stuff is, <a href="mailto:info@barefeetstudios">drop me an email</a> and I would be happy to consult with you and provide step-by-step instructions on how to get started and host blazingly fast and secure sites for free.
+
+Here's the original #100DaysOfCode project video:
 
 https://www.youtube.com/watch?v=z_mzJnk31Cg
 
