@@ -1,6 +1,7 @@
 const fs = require('fs')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 const pluginNavigation = require('@11ty/eleventy-navigation')
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const markdownIt = require('markdown-it')
 const markdownTasks = require('markdown-it-task-lists')
 const markdownItEmoji = require('markdown-it-emoji')
@@ -23,6 +24,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss)
   eleventyConfig.addPlugin(pluginNavigation)
   eleventyConfig.addPlugin(embedYouTube)
+  eleventyConfig.addPlugin(syntaxHighlight)
 
   /**
    * Filters
@@ -88,6 +90,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/robots.txt')
   eleventyConfig.addPassthroughCopy('src/assets/images/')
   eleventyConfig.addPassthroughCopy('src/assets/svg/')
+  eleventyConfig.addPassthroughCopy('src/assets/css/prism.css')
+  eleventyConfig.addPassthroughCopy('src/assets/scripts/prism.js')
 
   /**
    * Set custom markdown library instance...
