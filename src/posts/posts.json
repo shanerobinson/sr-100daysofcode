@@ -1,8 +1,5 @@
 {
   "layout": "post",
   "permalink": "/{{ title | slugify }}/index.html",
-  "tags": [
-    "post"
-  ],
-  "author": "Shane Robinson"
+  "tags": ["post"]
 }

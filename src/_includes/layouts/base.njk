@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ seo.title | default( title ) }}</title>
+  <title>{{ seo.title | default(title,true) }} | {{ meta.title }}</title>
+  {%- include "partials/head.njk" %}
   <link rel="stylesheet"href="https://rsms.me/inter/inter.css">
   <link rel="stylesheet" href="/assets/tailwind.css"/>
-  {# include "head.njk" #}
 </head>
   <body>
     <div hidden>{% svgsprite %}</div>

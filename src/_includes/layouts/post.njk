@@ -2,6 +2,7 @@
 layout: base
 tags: post
 ---
+{% set postAuthor = author | default(meta.author,true) %}
 
 {% if images.feature %}
 <figure class="h-48 sm:h-64 lg:h-96 w-screen -mx-12 -mt-12 sm:-mx-20 lg:-mx-32 ">
@@ -15,7 +16,7 @@ tags: post
     <small>
       <time datetime="{{ date | machineDate }}">
         {{ date | readableDate }}
-      </time> by <a href="/authors/{{ author | slug }}/">{{ author }}</a>
+      </time> by <a href="/authors/{{ postAuthor | slug }}/">{{ postAuthor }}</a>
     </small>
   </p>
 
