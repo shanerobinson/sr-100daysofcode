@@ -3,8 +3,8 @@ title: Welcome!
 layout: page
 eleventyNavigation:
   key: main
-  title: Welcome  # as it will appear in the nav
-  order: 1        # order to display in the nav
+  title: Welcome # as it will appear in the nav
+  order: 1 # order to display in the nav
 seo: #uncomment 'seo' and then any elements to use them
   title: Hello World
   description: Follow along to learn how to build fast, secure, beautiful static websites using 11ty and TailwindCSS.
@@ -17,7 +17,7 @@ seo: #uncomment 'seo' and then any elements to use them
 
 I created this mostly as an exercise in daily documentation and social interaction. The project management part is generally easy as we've been managing clients and projects in our company, [Bare Feet Studios, LLC](https://www.barefeetstudios.com) since 1996.
 
-### What this project/site is:
+## What this project/site is:
 
 - A playground for me to experiment and extend my knowledge and experience building static sites in [11ty](https://11ty.dev) and using [TailwindCSS](https://tailwindcss.com).
 - A place to document what I do and learn during the [#100DaysOfCode](https://www.100daysofcode.com/).
@@ -26,7 +26,7 @@ I created this mostly as an exercise in daily documentation and social interacti
 
 **[Please subscribe](https://shanerobinson.ck.page/100daysofcode) if you would like to follow along with weekly email udpates on the progress.**
 
-### What this site IS NOT:
+## What this site IS NOT:
 
 - A tutorial site with step-by-step instructions.
 
@@ -36,6 +36,6 @@ Here's the original #100DaysOfCode project video:
 
 https://www.youtube.com/watch?v=z_mzJnk31Cg
 
-### Extra...
+## Extra...
 
 Oh... And I'm also doing [#100DaysOfArt on my Instagram](https://instagram.com/shanerobinson) if you're interested in how an Artist & Programmer merges those two seemingly disparate worlds...

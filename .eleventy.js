@@ -22,8 +22,10 @@ module.exports = function (eleventyConfig) {
 
 	eleventyConfig.addPlugin(pluginRss)
 	eleventyConfig.addPlugin(pluginNavigation)
-	eleventyConfig.addPlugin(embedYouTube)
 	eleventyConfig.addPlugin(syntaxHighlight)
+	eleventyConfig.addPlugin(embedYouTube, {
+		lazy: true,
+	})
 
 	/**
 	 * Filters
