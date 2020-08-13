@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ seo.title | default(title,true) }} | {{ meta.title }}</title>
     {%- include "partials/head.njk" %}
-    <link rel="stylesheet"href="https://rsms.me/inter/inter.css">
+    <link rel="preconnect" href="https://rsms.me">
+    <link rel="dns-prefetch" href="https://rsms.me">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="stylesheet" href="/assets/tailwind.css"/>
     <link rel="stylesheet" href="/assets/css/prism-tomorrow.min.css"/>
   </head>
