@@ -92,6 +92,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('src/assets/images/')
 	eleventyConfig.addPassthroughCopy('src/assets/svg/')
 	eleventyConfig.addPassthroughCopy('src/assets/css/prism*.css')
+	eleventyConfig.addPassthroughCopy('src/assets/css/inter.css')
 
 	/**
 	 * Set custom markdown library instance...
