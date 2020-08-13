@@ -1,30 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ seo.title | default(title,true) }} | {{ meta.title }}</title>
-  {%- include "partials/head.njk" %}
-  <link rel="stylesheet"href="https://rsms.me/inter/inter.css">
-  <link rel="stylesheet" href="/assets/tailwind.css"/>
-  <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ seo.title | default(title,true) }} | {{ meta.title }}</title>
+    {%- include "partials/head.njk" %}
+    <link rel="stylesheet"href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="/assets/tailwind.css"/>
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+  </head>
   <body>
     <div hidden>{% svgsprite %}</div>
     <div class="flex flex-col min-h-screen">
-    {% include "components/nav.njk" %}
-
+      {% include "components/nav.njk" %}
       <div class="flex-grow mx-4 my-12 sm:mx-20 lg:mx-32 ">
         <main class="prose sm:prose-lg" id="content">
           {{ content | safe }}
         </main>
       </div>
-
       {% include "partials/footer.njk" %}
     </div>
-
-  <script src="/assets/main.js" defer></script>
- 	<script src="https://myCDN.com/prism@v1.x/components/prism-core.min.js"></script>
-	<script src="https://myCDN.com/prism@v1.x/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="/assets/main.js" defer></script>
+    <script src="https://myCDN.com/prism@v1.x/components/prism-core.min.js"></script>
+    <script src="https://myCDN.com/prism@v1.x/plugins/autoloader/prism-autoloader.min.js"></script>
   </body>
-</html> 
+</html>
