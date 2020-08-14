@@ -49,7 +49,6 @@
     "clean-css": "^4.2.3",
     "cssnano": "^4.1.10",
     "dotenv": "^8.2.0",
-    "eleventy-plugin-youtube-embed": "^1.4.3",
     "html-minifier": "^4.0.0",
     "luxon": "^1.24.1",
     "markdown-it": "^11.0.0",

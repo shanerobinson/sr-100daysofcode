@@ -34,7 +34,7 @@ I created this mostly as an exercise in daily documentation and social interacti
 
 Here's the original #100DaysOfCode project video:
 
-<div id="z_mzJnk31Cg" class="eleventy-plugin-youtube-embed" style="position:relative;width:100%;padding-top: 56.25%;"><iframe title="100 Days of Code - The Rules video" style="position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;" width="100%" height="100%" frameborder="0" src="https://www.youtube-nocookie.com/embed/z_mzJnk31Cg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy"></iframe></div>
+{% youtube "z_mzJnk31Cg", "100 Days of Code - The Rules video" %}
 
 ## Extra...
 

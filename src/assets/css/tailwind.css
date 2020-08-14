@@ -31,4 +31,9 @@
 	@apply my-0;
 }
 
+/* For video embeds shortcode */
+.video-16x9 {
+	padding-bottom: 56.25%;
+}
+
 @tailwind utilities;
