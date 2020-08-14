@@ -31,10 +31,4 @@
 	@apply my-0;
 }
 
-/* For video embeds shortcode
-    9 / 16 = .5625 * 100 = 56.25% */
-.video-16x9 {
-	padding-bottom: 56.25%;
-}
-
 @tailwind utilities;
