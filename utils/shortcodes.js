@@ -22,15 +22,28 @@ module.exports = {
 	},
 
 	/**
-	 * My own YouTube embed
-	 * instead of the plugin that wasn't configurable and didn't have Title
-	 * slug = required
-	 * title = required
-	 * startTime = optional
+	 * My YouTube embed with Title, Start (optional) and Ratio (optional)
+	 * vid     = "youtubeID" : required : default = "oHg5SJYRHA0"
+	 * vtitle  = "Your title for this video" : required : default = "YouTube Video"
+	 * vstart  = "4:20" : optional
+	 * vratio  = "w:h" : optional : default = "16:9"
 	 */
-	youtube: function (slug, title, startTime) {
-		return `<div id="${slug}" class="relative w-full video-16x9"><iframe class="absolute top-0 right-0 bottom-0 left-0 w-full h-full" width="100%" height="100%" title="${title}" src="https://www.youtube.com/embed/${slug}${
-			startTime ? `?start=${startTime}` : ''
+	youtube: function (vid, vtitle, vstart, vratio) {
+		const slug = vid ? vid : 'oHg5SJYRHA0'
+		const title = vtitle ? vtitle : 'YouTube Video'
+		const start = vstart
+			? vstart
+					.split(':')
+					.reduce((first, second) => Number(first) * 60 + Number(second))
+			: ''
+		const ratio = vratio ? vratio : '16:9'
+		const padding = ratio
+			.split(':')
+			.reduce((first, second) => (second / first) * 100)
+		const style = 'style="padding-bottom:' + padding + '%"'
+
+		return `<div id="${slug}" class="relative w-full" ${style}><iframe class="absolute top-0 right-0 bottom-0 left-0 w-full h-full" width="100%" height="100%" title="${title}" src="https://www.youtube.com/embed/${slug}${
+			start ? `?start=${start}` : ''
 		}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>`
 	},
 }
