@@ -12,7 +12,6 @@ const shortcodes = require('./utils/shortcodes.js')
 const pairedshortcodes = require('./utils/paired-shortcodes.js')
 const transforms = require('./utils/transforms.js')
 const svgsprite = require('./utils/svgsprite')
-const embedYouTube = require('eleventy-plugin-youtube-embed')
 
 module.exports = function (eleventyConfig) {
 	/**
@@ -23,9 +22,6 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(pluginRss)
 	eleventyConfig.addPlugin(pluginNavigation)
 	eleventyConfig.addPlugin(syntaxHighlight)
-	eleventyConfig.addPlugin(embedYouTube, {
-		lazy: true,
-	})
 
 	/**
 	 * Filters
