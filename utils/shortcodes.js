@@ -34,15 +34,14 @@ module.exports = {
 		const start = vstart
 			? vstart
 					.split(':')
-					.reduce((first, second) => Number(first) * 60 + Number(second))
+					.reduce((minute, seconds) => Number(minute) * 60 + Number(seconds))
 			: ''
 		const ratio = vratio ? vratio : '16:9'
 		const padding = ratio
 			.split(':')
 			.reduce((first, second) => (second / first) * 100)
-		const style = 'style="padding-bottom:' + padding + '%"'
 
-		return `<div id="${slug}" class="relative w-full" ${style}><iframe class="absolute top-0 right-0 bottom-0 left-0 w-full h-full" width="100%" height="100%" title="${title}" src="https://www.youtube.com/embed/${slug}${
+		return `<div id="${slug}" style="position:relative; width:100%; padding-bottom:${padding}%"><iframe style="position:absolute; top:0; right:0; bottom:0; left:0; width:100%; height:100%" width="100%" height="100%" title="${title}" src="https://www.youtube.com/embed/${slug}${
 			start ? `?start=${start}` : ''
 		}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>`
 	},
