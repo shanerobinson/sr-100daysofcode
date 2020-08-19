@@ -1,6 +1,6 @@
 <footer>
-  <div class="bg-white">
-    <div class="max-w-screen-xl px-4 py-12 mx-auto sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
+  <div class="bg-white border-t border-gray-200">
+    <div class="max-w-5xl px-4 pt-4 pb-12 sm:px-20 md:flex md:items-center md:justify-between lg:px-32">
       <div class="flex justify-center md:order-2 {{ colors.socialIcons | default('text-gray-400') }}">
 
         {% if social.dribbble %}
@@ -46,10 +46,13 @@
         {% endif %}
 
       </div>
-      <div class="mt-8 md:mt-0 md:order-1">
-        <p class="text-center text-base leading-6 {{ colors.footerText | default('text-gray-400') }}">
+      <div class="text-sm leading-6 {{ colors.footerText | default('text-gray-400') }} mt-8 md:mt-0 md:order-1">
+        <p>
           &copy; {{ meta.title }}
           {{ build.timestamp | dateToFormat('yyyy') }}
+        </p>
+        <p>
+Enthusiastically built with <a href="https://11ty.dev" alt="11ty Static Site Generator">11ty</a>, <a href="https://tailwindcss.com" alt="TailwindCSS Utility-First CSS Framework">TailwindCSS</a>, and hosted at <a href="https://netlify.com" alt="Netflify - Server Less, Do More">Netlify.</a>
         </p>
       </div>
     </div>
