@@ -9,6 +9,11 @@
     <link rel="dns-prefetch" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" defer/>
     <link rel="stylesheet" href="/assets/tailwind.css" defer/>
+    {% if hero == "carousel" -%}
+      <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+      <link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@1/fullscreen.css">
+    {%- endif -%}
+
     {% set prismTomorrow %}{% include "css/prism-tomorrow.min.css" %}{% endset -%}
     <style>
       {{prismTomorrow | cssmin | safe}}
@@ -27,5 +32,11 @@
       {% include "partials/footer.njk" %}
     </div>
     <script src="/assets/main.js" defer></script>
+    {# Only include the Flickity js if this page uses a hero.carousel  #}
+    {% if hero == "carousel" %}
+      <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+      <script src="https://unpkg.com/flickity-fullscreen@1/fullscreen.js"></script>
+    {% endif %}
+
   </body>
 </html>

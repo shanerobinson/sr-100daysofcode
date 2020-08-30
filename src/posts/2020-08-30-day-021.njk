@@ -1,0 +1,104 @@
+---
+title: Day 021 - Frontmatter Arrays
+date: 2020-08-30T08:36:36.000Z
+excerpt: Frontmatter Arrays in 11ty make it easier for Content Editors to manage complicated features.
+author: # default: Shane Robinson (meta.author)
+tags:
+  -11ty
+  - arrays
+  - gallery
+  - carousel
+  - ecommerce
+  - frontmatter
+seo:
+  title: # default: title
+  description: Frontmatter Arrays in 11ty make it easier for Content Editors to manage complicated features. # default: meta.description
+  image: 021/021-twitter-card.jpg # syntax = 00N/image.png | default: meta.image
+hero: # options: carousel, graphic, video, split (text & image)
+heroSettings:
+  height:
+    mobile: # options = 1/1 (default = full screen), 1/2, 1/3, 3/4, 9/10, h-48 (12rem, 192px), h-56 (14rem, 224px), h-64 (16rem, 256px)
+    desktop: # leave blank to inherit "mobile" height (default = full screen)
+  imagePath: /assets/images/2020/08/
+  carousel: 
+    - label: Slide 1
+      image: 1.jpg
+    - label: Slide 2
+      image: 2.jpg
+---
+
+<blockquote class="p-2 bg-red-100">
+At the end of this post I reference a project I'm working on that will go into detailed examples of how to build all the things I'm working on during this #100DaysOfCode project. For those already <a href="https://shanerobinson.ck.page/100daysofcode" target="_blank" rel="noopener noreferrer">subscribed to my email list</a> they received the secret link to that project currently in development. 
+</blockquote>
+
+<p>I try to build with the end-user in mind. And while that is not always apparent, it does remain a priority.</p>
+
+<p>And, there does have to be a bit of "learning" on the part of the end user and Content Editors when working in a static site system.</p>
+
+<p>One of the ways to make it easier for Editors is to introduce patterns and ways to duplicate repetitive code/content when possible.</p>
+
+<p>For example:</p>
+<ul>
+  <li>Image Galleries</li>
+  <li>Carousels / Image Sliders</li>
+  <li>Products and Related Products</li>
+  <li>Lists</li>
+</ul>
+
+<p>Some elements, like <em>Lists</em>, are easy to format in Markdown. But items that require a lot of custom HTML, CSS, and Javascript, like <em>Image Galleries, Carousels, and Products</em> would be all but impossible for most Content Editors.</p>
+
+<p>Enter: <strong>Frontmatter Arrays</strong>
+</p>
+
+<p>Here's some partial Frontmatter from this page:</p>
+
+{% highlight "yaml" %}
+hero: carousel # options: carousel, graphic, video, split (text & image)
+heroSettings:
+  height:
+    mobile: # options = 1/1 (default = full screen), 1/2, 1/3, 3/4, 9/10, h-48 (12rem, 192px), h-56 (14rem, 224px), h-64 (16rem, 256px)
+    desktop: # leave blank to inherit "mobile" height (default = full screen)
+  imagePath: /assets/images/2020/08/
+  carousel: 
+    - label: Slide 1
+      image: 1.jpg
+    - label: Slide 2
+      image: 2.jpg
+    - label: Slide 3
+      image: 3.jpg
+{% endhighlight %}
+
+<p>The important parts for today's work are the:</p>
+
+<ul>
+  <li>hero: carousel</li>
+  <li>heroSettings:</li>
+  <li>imagePath: /assets/images/2020/08/</li>
+  <li>carousel:</li>
+</ul>
+
+<h3>hero: carousel</h3>
+<p>
+  This is going to tell the `base.njk` template that this page will have a `carousel` and to load the required CSS and Javascript that we need the carousel to work.
+</p>
+
+<h3>heroSettings:</h3>
+<p>
+  This is an array of various settings like "height", default "imagePath", and a "carousel" setting.
+</p>
+
+<h3>imagePath:</h3>
+<p>This is the folder where we can find the images for this post. It's good to set this in a single place in case it changes. Then we just have to change it here and not at every image in the carousel.image values.</p>
+
+<h3>carousel:</h3>
+<p>
+  This is a nested array that can contain a lot of different information for each of the "slides" in the carousel. We need to know the "image" for each slide. We also have a "lable" for each slide that could be used in a text overlay.
+</p>
+
+<p>We could add as many settings for each slide as we need. But this is simple for the purpose of this exercise.</p>
+
+<p>
+  <strong>So now all a Content Editor has to do is "label" each image, provide the "image" name, and add as many additional images as they want in the slider.</strong>
+</p>
+
+As I outline on the Welcome page, this site is simply a "journal" of my #100DaysOfCode and not a detailed tutorial of how to build out the stuff I'm working on during this project...BUT...part of this #100DaysOfCode project is to actually build out a site where I do go into the details and examples of how to build these things out using <a href="https://11ty.dev" target="_blank" rel="noopener noreferrer">11ty</a>, <a href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer">TailwindCSS</a>, and <a href="https://github.com/alpinejs/alpine" target="_blank" rel="noopener noreferrer">Alpine.js</a>.
