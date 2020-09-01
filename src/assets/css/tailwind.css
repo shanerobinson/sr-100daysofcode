@@ -31,4 +31,8 @@
 	@apply my-0;
 }
 
+.prose .wrapper p {
+	@apply my-0;
+}
+
 @tailwind utilities;

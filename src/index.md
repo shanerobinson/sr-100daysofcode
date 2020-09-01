@@ -17,14 +17,17 @@ seo: #uncomment 'seo' and then any elements to use them
 
 I created this mostly as an exercise in daily documentation and social interaction. The project management part is generally easy as we've been managing clients and projects in our company, [Bare Feet Studios, LLC](https://www.barefeetstudios.com) since 1996.
 
+{% wrap "p-2 rounded-lg border border-indigo-400 bg-indigo-200" %}
+
+[Please subscribe to my weekly email](https://shanerobinson.ck.page/100daysofcode) for sneak peeks on projects and what I found most interesting and/or difficult that week. It's short, text-based, and also a work in progress. :smile:
+{% endwrap %}
+
 ## What this project/site is:
 
 - A playground for me to experiment and extend my knowledge and experience building static sites in [11ty](https://11ty.dev) and using [TailwindCSS](https://tailwindcss.com).
 - A place to document what I do and learn during the [#100DaysOfCode](https://www.100daysofcode.com/).
 - A site to serve as reference for future projects.
 - An exercise in "getting back into social media" after dropping out several years ago out of frustration with what social media has become.
-
-**[Please subscribe](https://shanerobinson.ck.page/100daysofcode) if you would like to follow along with weekly email udpates on the progress.**
 
 ## What this site IS NOT:
 
